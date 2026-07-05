@@ -167,29 +167,48 @@ document.addEventListener('DOMContentLoaded', () => {
       document.head.appendChild(style);
     }
 
-    // Simulate Server Request Delay (1.2 seconds)
-    setTimeout(() => {
+    // Submit using fetch to Formspree
+    const data = new FormData(consultationForm);
+    
+    fetch(consultationForm.action, {
+      method: consultationForm.method || 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
       // Restore Button State
       submitBtn.disabled = false;
       submitBtn.style.opacity = '1';
       submitBtn.innerHTML = originalText;
 
-      // Show success alert
-      formSuccess.style.display = 'flex';
-      
-      // Reset Form fields
-      consultationForm.reset();
+      if (response.ok) {
+        // Show success alert
+        formSuccess.style.display = 'flex';
+        
+        // Reset Form fields
+        consultationForm.reset();
 
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        formSuccess.style.opacity = '0';
+        // Hide success message after 5 seconds
         setTimeout(() => {
-          formSuccess.style.display = 'none';
-          formSuccess.style.opacity = '1';
-        }, 400);
-      }, 5000);
-      
-    }, 1200);
+          formSuccess.style.opacity = '0';
+          setTimeout(() => {
+            formSuccess.style.display = 'none';
+            formSuccess.style.opacity = '1';
+          }, 400);
+        }, 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    })
+    .catch(error => {
+      // Restore Button State
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+      submitBtn.innerHTML = originalText;
+      alert('Oops! There was a problem submitting your form. Please try again or email us directly.');
+    });
   });
 
 });
