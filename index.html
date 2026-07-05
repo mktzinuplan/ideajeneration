@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDEASJENERATION - Premium Marketing & Brand Consulting, Training & Analytics</title>
+  <meta name="description" content="IDEASJENERATION provides expert Marketing & Brand Consulting, Professional Training, and Data Mining & Marketing Analysis to accelerate growth and empower modern teams.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="main-header" id="mainHeader">
+    <div class="nav-container">
+      <div class="logo" id="logoLink">
+        <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cursive stylized J connecting to lightbulb base -->
+          <path d="M40 75 C40 85, 30 90, 20 80 C12 72, 25 55, 35 40 C45 25, 48 10, 55 10 C62 10, 60 25, 55 40 C50 55, 40 65, 40 75 Z" fill="none" stroke="url(#tealGradient)" stroke-width="6" stroke-linecap="round" />
+          <!-- Lightbulb outline on the right -->
+          <path d="M55 40 C65 40, 75 48, 75 60 C75 70, 68 76, 64 80 L64 85 C64 87, 62 89, 60 89 L50 89 C48 89, 46 87, 46 85 L46 80 C42 76, 35 70, 35 60" fill="none" stroke="url(#goldGradient)" stroke-width="4" stroke-linecap="round" />
+          <!-- Lightbulb filament -->
+          <path d="M50 72 L55 64 L45 64 L50 72" fill="none" stroke="#f0a82b" stroke-width="3" stroke-linejoin="round" />
+          <!-- Glow rays -->
+          <line x1="75" y1="42" x2="83" y2="34" stroke="#f0a82b" stroke-width="3" stroke-linecap="round" />
+          <line x1="85" y1="60" x2="93" y2="60" stroke="#f0a82b" stroke-width="3" stroke-linecap="round" />
+          <line x1="75" y1="78" x2="83" y2="86" stroke="#f0a82b" stroke-width="3" stroke-linecap="round" />
+          
+          <defs>
+            <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1ec2db" />
+              <stop offset="100%" stop-color="#138596" />
+            </linearGradient>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffc107" />
+              <stop offset="100%" stop-color="#f0a82b" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-top">ideas</span>
+          <span class="logo-bottom">JENeration</span>
+        </div>
+      </div>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-item active">Home</a>
+        <a href="#services" class="nav-item">Services</a>
+        <a href="#training" class="nav-item">Training</a>
+        <a href="#about" class="nav-item">Your Mentor</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+      
+      <a href="#contact" class="btn btn-secondary" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;">Consultation</a>
+      
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">A Brand Strategy & Analytics Agency</div>
+        <h1 class="hero-title">Turn ideas into strategies, actions, and <span class="text-gradient">measurable growth.</span></h1>
+        <p class="hero-desc">IDEASJENERATION helps businesses strengthen brand direction, uncover consumer insights, scale market performance, and up-skill marketing teams with professional corporate masterclasses.</p>
+        <div class="hero-ctas">
+          <a href="#services" class="btn btn-primary">
+            Explore Services
+            <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-globe"></div>
+        <!-- Card 1: Consulting -->
+        <div class="floating-card fc-1" onclick="openModal('consulting')">
+          <div class="fc-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="fc-title">Brand Consulting</div>
+          <div class="fc-desc">Sharp strategy, positioning and product concept frameworks.</div>
+        </div>
+        <!-- Card 2: Data Mining -->
+        <div class="floating-card fc-2" onclick="openModal('mining')">
+          <div class="fc-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="fc-title">Marketing Analysis</div>
+          <div class="fc-desc">Turn sales, competitor, and customer data into insights.</div>
+        </div>
+        <!-- Card 3: Speaker Lightbulb -->
+        <div class="floating-card fc-3" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
+          <div class="fc-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .5 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/></svg>
+          </div>
+          <div class="fc-title">Nutthinee J.</div>
+          <div class="fc-desc">25+ Years Strategy Mentor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Section -->
+  <section class="py-section" id="services">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Core Capabilities</span>
+        <h2>Services Designed for <span class="highlight">Strategic Impact</span></h2>
+        <p>Whether you need strategic clarity before moving into execution, data-backed proof points to guide your portfolio, or hands-on team training, we have you covered.</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Service Card 1: Consulting -->
+        <div class="service-card">
+          <div class="sc-header">
+            <div class="sc-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <span class="sc-num">01</span>
+          </div>
+          <h3 class="sc-title">Marketing & Brand <span class="highlight-word">Consulting</span></h3>
+          <p class="sc-desc">We help businesses sharpen brand strategy, clarify positioning, identify growth opportunities, and turn business challenges into actionable marketing plans.</p>
+          <div class="sc-features-list">
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Brand Strategy Review</span>
+            </div>
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Brand Positioning Blueprint</span>
+            </div>
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Competitor & Trend Analysis</span>
+            </div>
+          </div>
+          <div class="sc-cta-link" onclick="openModal('consulting')">
+            <span>Learn More & View Outputs</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+
+        <!-- Service Card 2: Data Mining -->
+        <div class="service-card">
+          <div class="sc-header">
+            <div class="sc-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+            </div>
+            <span class="sc-num">02</span>
+          </div>
+          <h3 class="sc-title">Data Mining & Marketing <span class="highlight-word">Analysis</span></h3>
+          <p class="sc-desc">We analyze sales, market, e-commerce, competitor, social listening, and consumer feedback data to uncover insights, risks, and growth opportunities for better business decisions.</p>
+          <div class="sc-features-list">
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>E-commerce Performance Analysis</span>
+            </div>
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Social Listening Summary</span>
+            </div>
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Opportunity & Risk Mapping</span>
+            </div>
+          </div>
+          <div class="sc-cta-link" onclick="openModal('mining')">
+            <span>Learn More & View Outputs</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </div>
+
+        <!-- Service Card 3: Training (Featured) -->
+        <div class="service-card featured">
+          <div class="sc-header">
+            <div class="sc-icon-box">
+              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="sc-num">03</span>
+          </div>
+          <h3 class="sc-title">Marketing & Leadership <span class="highlight-word">Training</span></h3>
+          <p class="sc-desc">Upskill your corporate teams and brand owners with premium interactive workshops tailored to modern market strategies, Gen-Z trends, and marketing finance.</p>
+          <div class="sc-features-list">
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Strategic Marketing Intensive</span>
+            </div>
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Branding & Positioning Workshops</span>
+            </div>
+            <div class="sc-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Finance for Marketers Masterclass</span>
+            </div>
+          </div>
+          <a href="#training" class="sc-cta-link">
+            <span>Explore Courses & Syllabus</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Detail Modal: Brand Consulting -->
+  <div class="modal-overlay" id="consultingModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeModal('consulting')">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      
+      <div class="modal-header-hero">
+        <span class="modal-badge">Service Details</span>
+        <h3 class="modal-title">Marketing & Brand Consulting</h3>
+        <p class="modal-tagline">For companies that need sharper strategy, clearer direction, and practical growth plans.</p>
+      </div>
+      
+      <div class="modal-body">
+        <div>
+          <h4 class="modal-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            Overview
+          </h4>
+          <p class="modal-description">IDEASJENERATION provides marketing and brand consulting for businesses that want to strengthen their brand direction, improve market performance, or identify new growth opportunities. We help translate business challenges into clear strategic choices — from where to play, how to win, who to target, what to communicate, and how to turn strategy into action.</p>
+          
+          <h4 class="modal-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Key Consulting Areas
+          </h4>
+          <ul class="modal-list">
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Brand strategy review & brand direction mapping</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Brand positioning and repositioning strategies</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Category and competitor analysis</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Consumer insight interpretation & product concept development</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Marketing campaign direction & go-to-market plans</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Portfolio review & innovation roadmaps</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Business growth opportunity mapping</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <div class="modal-sidebar">
+            <div>
+              <h5 class="sidebar-block-title">Best For</h5>
+              <div class="sidebar-list">
+                <div class="sidebar-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  Brand Owners & Founders
+                </div>
+                <div class="sidebar-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  Marketing Teams & Startups
+                </div>
+                <div class="sidebar-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  SMEs & Corporate Teams
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h5 class="sidebar-block-title">Possible Deliverables</h5>
+              <div class="sidebar-list">
+                <div class="sidebar-item">Brand Strategy Document</div>
+                <div class="sidebar-item">Positioning Statement Mapping</div>
+                <div class="sidebar-item">Go-to-Market Action Plan</div>
+                <div class="sidebar-item">Campaign Strategic Roadmap</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('consulting')">Close</button>
+        <a href="#contact" class="btn btn-primary" onclick="setContactSubject('Marketing & Brand Consulting')">Discuss Your Business Challenge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Detail Modal: Data Mining -->
+  <div class="modal-overlay" id="miningModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeModal('mining')">
+        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      
+      <div class="modal-header-hero" style="background: linear-gradient(135deg, rgba(240, 168, 43, 0.1) 0%, rgba(7, 9, 14, 0) 100%);">
+        <span class="modal-badge" style="background: rgba(240, 168, 43, 0.15); border-color: rgba(240, 168, 43, 0.2); color: var(--accent);">Service Details</span>
+        <h3 class="modal-title">Data Mining & Marketing Analysis</h3>
+        <p class="modal-tagline">Turn scattered business data into insights, actions, and growth opportunities.</p>
+      </div>
+      
+      <div class="modal-body">
+        <div>
+          <h4 class="modal-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            Overview
+          </h4>
+          <p class="modal-description">Many businesses already have data, but do not always have the time or structure to turn it into useful decisions. IDEASJENERATION helps analyze marketing, sales, consumer, competitor, and digital data to uncover what is really happening in the market and what the business should do next. This service is designed to help teams move beyond reporting and understand the “so what” behind the numbers.</p>
+          
+          <h4 class="modal-section-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            Key Analysis Areas
+          </h4>
+          <ul class="modal-list">
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Sales performance, channel and customer behavior analysis</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Market share and category dynamic analysis</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>E-commerce store performance & sales funnel reviews</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Competitor movement tracking and bench-marking</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Social listening and consumer review sentiment analysis</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Campaign performance and product portfolio audits</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Consumer review analysis and core customer pain points</span>
+            </li>
+            <li class="modal-list-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Strategic opportunity and risk identification mapping</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <div class="modal-sidebar">
+            <div>
+              <h5 class="sidebar-block-title">Best For</h5>
+              <div class="sidebar-list">
+                <div class="sidebar-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  E-commerce Teams
+                </div>
+                <div class="sidebar-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  Brand & Commercial Managers
+                </div>
+                <div class="sidebar-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  Owners requiring data proof
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h5 class="sidebar-block-title">Possible Deliverables</h5>
+              <div class="sidebar-list">
+                <div class="sidebar-item">Insight & Analysis Report</div>
+                <div class="sidebar-item">Interactive Business Dashboard</div>
+                <div class="sidebar-item">Competitor Mapping Matrix</div>
+                <div class="sidebar-item">Prioritized Action Plan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('mining')">Close</button>
+        <a href="#contact" class="btn btn-accent" onclick="setContactSubject('Data Mining & Marketing Analysis')">Request Data Analysis Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Professional Training Section -->
+  <section class="py-section" id="training" style="background-color: var(--bg-secondary);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Up-skilling Hub</span>
+        <h2>Accelerate Team Capabilities with <span class="highlight">Expert Workshops</span></h2>
+        <p>Our corporate training programs and masterclasses turn complex marketing frameworks into practical capabilities, enabling your commercial teams to drive business growth under uncertainty.</p>
+      </div>
+
+      <!-- 6 Training Pillars Tab Panel -->
+      <div class="training-hub-container">
+        <!-- Left: Vertical tabs -->
+        <div class="training-tabs-sidebar">
+          <button class="training-tab active" onclick="switchTrainingTab(1)">
+            <span class="tab-num">01</span>
+            <span class="tab-title">Marketing & Brand Growth Strategy</span>
+          </button>
+          <button class="training-tab" onclick="switchTrainingTab(2)">
+            <span class="tab-num">02</span>
+            <span class="tab-title">Consumer Insight, Data Mining & Intelligence</span>
+          </button>
+          <button class="training-tab" onclick="switchTrainingTab(3)">
+            <span class="tab-num">03</span>
+            <span class="tab-title">Digital, TikTok & Modern Marketing</span>
+          </button>
+          <button class="training-tab" onclick="switchTrainingTab(4)">
+            <span class="tab-num">04</span>
+            <span class="tab-title">Innovation & Product Concept</span>
+          </button>
+          <button class="training-tab" onclick="switchTrainingTab(5)">
+            <span class="tab-num">05</span>
+            <span class="tab-title">Business Strategy, Finance & Risk</span>
+          </button>
+          <button class="training-tab" onclick="switchTrainingTab(6)">
+            <span class="tab-num">06</span>
+            <span class="tab-title">Customized Corporate Training</span>
+          </button>
+        </div>
+
+        <!-- Right: Active content cards -->
+        <div class="training-content-display">
+          <!-- Pillar 1 Content -->
+          <div class="training-pillar-panel active" id="pillar-1">
+            <h3 class="pillar-title">1. Marketing & Brand Growth Strategy</h3>
+            <p class="pillar-tagline">For companies that want sharper marketing direction, stronger brand positioning, and clearer growth priorities.</p>
+            <p class="pillar-desc">We help teams understand the market, define brand direction, sharpen positioning, plan campaigns, and build practical growth roadmaps that connect strategy with execution.</p>
+            
+            <div class="pillar-details-split">
+              <div>
+                <h4 class="pillar-sub-title">Includes:</h4>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">Strategic marketing planning</span>
+                  <span class="pillar-tag">Branding & positioning</span>
+                  <span class="pillar-tag">Campaign planning</span>
+                  <span class="pillar-tag">Brand growth strategy</span>
+                  <span class="pillar-tag">Portfolio planning</span>
+                  <span class="pillar-tag">Go-to-market direction</span>
+                  <span class="pillar-tag">Marketing & brand consulting</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="pillar-sub-title">Related Courses:</h4>
+                <div class="pillar-courses">
+                  <div class="pillar-course-chip" onclick="setContactCourse('Strategic Marketing Intensive Course')">Strategic Marketing Intensive Course</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Branding & Positioning Course')">Branding & Positioning</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Marketing Strategy 101')">Marketing Strategy & Campaign Planning 101</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Brand Growth Strategy Course')">Brand Growth Strategy & Portfolio Planning</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pillar 2 Content -->
+          <div class="training-pillar-panel" id="pillar-2">
+            <h3 class="pillar-title">2. Consumer Insight, Data Mining & Market Intelligence</h3>
+            <p class="pillar-tagline">For teams that need to turn data, market signals, and consumer behavior into business opportunities.</p>
+            <p class="pillar-desc">We help businesses analyze sales, market, competitor, e-commerce, social listening, and consumer feedback data to uncover insights, risks, gaps, and growth opportunities.</p>
+            
+            <div class="pillar-details-split">
+              <div>
+                <h4 class="pillar-sub-title">Includes:</h4>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">Consumer insight development</span>
+                  <span class="pillar-tag">Market and category analysis</span>
+                  <span class="pillar-tag">Competitor intelligence</span>
+                  <span class="pillar-tag">Social listening analysis</span>
+                  <span class="pillar-tag">Consumer review mining</span>
+                  <span class="pillar-tag">E-commerce and performance analysis</span>
+                  <span class="pillar-tag">Insight-to-action recommendation</span>
+                  <span class="pillar-tag">Data storytelling for management</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="pillar-sub-title">Related Courses / Services:</h4>
+                <div class="pillar-courses">
+                  <div class="pillar-course-chip" onclick="setContactCourse('Data-Driven Strategy & Market Intelligence')">Data-Driven Strategy & Market Intelligence</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Consumer Insight to Opportunity')">Consumer Insight to Business Opportunity</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Data Mining & Marketing Analysis')">Data Mining & Marketing Analysis Service</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 3 Content -->
+          <div class="training-pillar-panel" id="pillar-3">
+            <h3 class="pillar-title">3. Digital, TikTok & Modern Consumer Marketing</h3>
+            <p class="pillar-tagline">For brands that want to stay relevant with modern consumers and create stronger digital content.</p>
+            <p class="pillar-desc">We help teams understand Gen Z, Gen Alpha, TikTok culture, social-first marketing, short-form content, creator collaboration, and digital campaign planning.</p>
+            
+            <div class="pillar-details-split">
+              <div>
+                <h4 class="pillar-sub-title">Includes:</h4>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">Gen Z consumer strategy</span>
+                  <span class="pillar-tag">TikTok marketing</span>
+                  <span class="pillar-tag">Short-form video content</span>
+                  <span class="pillar-tag">Content pillar development</span>
+                  <span class="pillar-tag">Social commerce direction</span>
+                  <span class="pillar-tag">Creator and UGC strategy</span>
+                  <span class="pillar-tag">Digital campaign planning</span>
+                  <span class="pillar-tag">Performance optimization</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="pillar-sub-title">Related Courses:</h4>
+                <div class="pillar-courses">
+                  <div class="pillar-course-chip" onclick="setContactCourse('Brand Like a Boss')">Brand Like a Boss</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Marketing in the TikTok Era')">Marketing in the TikTok Era</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Marketing Strategy 101 - Gen Z Style')">Marketing Strategy & Campaign Planning 101 — Gen Z Style</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 4 Content -->
+          <div class="training-pillar-panel" id="pillar-4">
+            <h3 class="pillar-title">4. Innovation & Product Concept Development</h3>
+            <p class="pillar-tagline">For brands and teams that need to create better product ideas, stronger concepts, and more compelling reasons to believe.</p>
+            <p class="pillar-desc">We help teams move from consumer insight to opportunity territory, product idea, concept board, RTB, claims, packaging direction, and validation plan.</p>
+            
+            <div class="pillar-details-split">
+              <div>
+                <h4 class="pillar-sub-title">Includes:</h4>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">Innovation strategy</span>
+                  <span class="pillar-tag">Product concept development</span>
+                  <span class="pillar-tag">Insight-to-product idea</span>
+                  <span class="pillar-tag">Concept board creation</span>
+                  <span class="pillar-tag">Claims and RTB development</span>
+                  <span class="pillar-tag">Product experience & pack direction</span>
+                  <span class="pillar-tag">Creative ideation workshop</span>
+                  <span class="pillar-tag">Innovation pitch workshop</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="pillar-sub-title">Related Courses:</h4>
+                <div class="pillar-courses">
+                  <div class="pillar-course-chip" onclick="setContactCourse('Innovation Sprint Course')">Innovation Sprint: From Insight to Product Concept</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Consumer Insight to Opportunity')">Consumer Insight to Business Opportunity</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Creative Thinking Workshop')">Creative Thinking for Modern Professionals</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 5 Content -->
+          <div class="training-pillar-panel" id="pillar-5">
+            <h3 class="pillar-title">5. Business Strategy, Finance & Risk Thinking</h3>
+            <p class="pillar-tagline">For managers and business teams that need to make better decisions under uncertainty.</p>
+            <p class="pillar-desc">We help participants think beyond daily execution, understand business drivers, connect strategy with risk, and make decisions using business logic, numbers, and scenario thinking.</p>
+            
+            <div class="pillar-details-split">
+              <div>
+                <h4 class="pillar-sub-title">Includes:</h4>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">Strategic thinking for managers</span>
+                  <span class="pillar-tag">Business risk identification</span>
+                  <span class="pillar-tag">Risk mapping & prioritization</span>
+                  <span class="pillar-tag">Scenario planning</span>
+                  <span class="pillar-tag">Financial thinking for non-finance</span>
+                  <span class="pillar-tag">Marketing ROI & budgeting</span>
+                  <span class="pillar-tag">P&L & business case thinking</span>
+                  <span class="pillar-tag">30/60/90-day action planning</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="pillar-sub-title">Related Courses:</h4>
+                <div class="pillar-courses">
+                  <div class="pillar-course-chip" onclick="setContactCourse('Strategic Thinking & Business Risk')">Strategic Thinking & Business Risk for Managers</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Finance for Marketers Course')">From Brand Stories to Bottom Lines: Finance for Marketers, Commercial Leaders & Entrepreneurs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pillar 6 Content -->
+          <div class="training-pillar-panel" id="pillar-6">
+            <h3 class="pillar-title">6. Customized Corporate Training & Capability Building</h3>
+            <p class="pillar-tagline">For companies that want a tailored learning program based on their real business challenges.</p>
+            <p class="pillar-desc">We design customized workshops, corporate training programs, marketing academies, leadership sessions, and team capability-building journeys based on the company’s goals, participants, and business context.</p>
+            
+            <div class="pillar-details-split">
+              <div>
+                <h4 class="pillar-sub-title">Includes:</h4>
+                <div class="pillar-tags">
+                  <span class="pillar-tag">Customized in-house training</span>
+                  <span class="pillar-tag">Marketing academy design</span>
+                  <span class="pillar-tag">Leadership & team development</span>
+                  <span class="pillar-tag">DISC communication workshop</span>
+                  <span class="pillar-tag">Growth mindset workshop</span>
+                  <span class="pillar-tag">Coaching and feedback lab</span>
+                  <span class="pillar-tag">Marketing career development</span>
+                  <span class="pillar-tag">Case-based learning</span>
+                  <span class="pillar-tag">Facilitator guides & workbooks</span>
+                  <span class="pillar-tag">Post-course action planning</span>
+                </div>
+              </div>
+              <div>
+                <h4 class="pillar-sub-title">Related Courses / Programs:</h4>
+                <div class="pillar-courses">
+                  <div class="pillar-course-chip" onclick="setContactCourse('From Intern to CMO')">From Intern to CMO</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Leadership Program')">DISC / Growth Mindset / GROW / SBI Leadership Program</div>
+                  <div class="pillar-course-chip" onclick="setContactCourse('Customized In-House Training')">Customized In-House Training & Workshop Design</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Workshop Gallery Showcase -->
+      <div class="gallery-section">
+        <h3 style="margin-bottom: 2rem; text-align: center;">Workshop Gallery</h3>
+        <div class="gallery-grid">
+          <div class="gallery-card">
+            <img src="assets/workshop_gallery_1.jpg" alt="Nutthinee J. presenting Consumer Journey">
+            <div class="gallery-card-content">
+              <span class="gallery-card-tag">Interactive</span>
+              <span class="gallery-card-title">Brand Health Check-in Workshop</span>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/workshop_gallery_2.jpg" alt="Nutthinee J. presenting Thinking Structure">
+            <div class="gallery-card-content">
+              <span class="gallery-card-tag">Strategy</span>
+              <span class="gallery-card-title">Strategic Marketing Strategy</span>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/workshop_gallery_3.jpg" alt="Nutthinee J. presenting Positioning Workshop">
+            <div class="gallery-card-content">
+              <span class="gallery-card-tag">Branding</span>
+              <span class="gallery-card-title">Brand Positioning Workshop</span>
+            </div>
+          </div>
+          <div class="gallery-card">
+            <img src="assets/workshop_gallery_4.jpg" alt="Nutthinee J. Strategic Marketing Lab">
+            <div class="gallery-card-content">
+              <span class="gallery-card-tag">Leadership</span>
+              <span class="gallery-card-title">Leadership for Growth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentor Section -->
+  <section class="py-section" id="about" style="background-color: var(--bg-primary);">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-subtitle">Your Mentor</span>
+        <h2>Executive Speaker & <span class="highlight">Strategy Partner</span></h2>
+        <p>Led by Nutthinee J., bringing 25+ years of commercial, startup, and global corporate expertise to help elevate next-generation brand and marketing leadership.</p>
+      </div>
+
+      <div class="bio-grid">
+        <div class="bio-image-wrapper">
+          <div class="bio-image-frame">
+            <img src="assets/profile.jpg" alt="Nutthinee Jenwattanavech">
+          </div>
+          <div class="bio-image-decor"></div>
+        </div>
+        <div class="bio-details">
+          <h2>Nutthinee J.</h2>
+          <div class="bio-titles">
+            <span>Executive Speaker</span>
+            <span>Brand Strategist</span>
+            <span>Business Mentor</span>
+          </div>
+          <p class="bio-desc">With over 25 years of leadership in the beauty, retail, and lifestyle industries, Nutthinee brings a powerful mix of strategic brand building, hands-on marketing expertise, and entrepreneurial success.</p>
+          <p class="bio-desc">She is currently the Chief Marketing Officer of a leading beauty brand in Thailand and the founder of a successful Thai beauty brand. Earlier in her career, she held senior leadership roles in some of the world's most respected beauty companies, including L'Oréal and M·A·C Cosmetics, alongside experience as Head of Condominium Business in Thailand. She works across mass to luxury categories in both corporate and startup landscapes.</p>
+          
+          <div class="bio-contact-details">
+            <div class="bio-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>nutthinee@gmail.com</span>
+            </div>
+            <div class="bio-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>www.ideasjeneration.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Contact Section -->
+  <section class="py-section contact-section" id="contact">
+    <div class="section-container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div>
+            <span class="section-subtitle">Let's Connect</span>
+            <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Let’s Shape Your <span class="highlight">Next Move</span></h2>
+            <p>Ready to clarify brand direction, leverage data insights, or design a custom workshop for your team? Tell us about your business challenge.</p>
+          </div>
+          
+          <div class="contact-details-list">
+            <div class="contact-detail-card">
+              <div class="cdc-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="cdc-info">
+                <span class="cdc-label">Email Us</span>
+                <span class="cdc-value">nutthinee@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <form class="contact-form" id="consultationForm">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label" for="clientName">Full Name *</label>
+                <input class="form-input" type="text" id="clientName" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="clientCompany">Company Name</label>
+                <input class="form-input" type="text" id="clientCompany" placeholder="Acme Corp">
+              </div>
+            </div>
+            
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label" for="clientEmail">Email Address *</label>
+                <input class="form-input" type="email" id="clientEmail" required placeholder="john@company.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="clientPhone">Phone Number *</label>
+                <input class="form-input" type="tel" id="clientPhone" required placeholder="+66 81 234 5678">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="interestService">What Service Are You Interested In? *</label>
+              <select class="form-select" id="interestService" required>
+                <option value="" disabled selected>Select service context</option>
+                <option value="Marketing & Brand Consulting">Marketing & Brand Consulting</option>
+                <option value="Data Mining & Marketing Analysis">Data Mining & Marketing Analysis</option>
+                <option value="Training : Marketing & Brand Growth Strategy">Training : Marketing & Brand Growth Strategy</option>
+                <option value="Training : Consumer Insight, Data Mining & Market Intelligence">Training : Consumer Insight, Data Mining & Market Intelligence</option>
+                <option value="Training : Digital, TikTok & Modern Consumer Marketing">Training : Digital, TikTok & Modern Consumer Marketing</option>
+                <option value="Training : Innovation & Product Concept Development">Training : Innovation & Product Concept Development</option>
+                <option value="Training : Business Strategy, Finance & Risk Thinking">Training : Business Strategy, Finance & Risk Thinking</option>
+                <option value="Training : Customized Corporate Training & Capability Building">Training : Customized Corporate Training & Capability Building</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="clientMessage">Briefly Describe Your Challenge *</label>
+              <textarea class="form-textarea" id="clientMessage" required placeholder="Share details about what you want to achieve or specific training timelines..."></textarea>
+            </div>
+            
+            <div class="form-message-success" id="formSuccessMessage">
+              <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Thank you! Your request was received. We will get back to you shortly.</span>
+            </div>
+            
+            <button class="btn btn-primary" type="submit" style="align-self: flex-start;">
+              Send Inquiry
+              <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 75 C40 85, 30 90, 20 80 C12 72, 25 55, 35 40 C45 25, 48 10, 55 10 C62 10, 60 25, 55 40 C50 55, 40 65, 40 75 Z" fill="none" stroke="url(#tealGradientFooter)" stroke-width="6" stroke-linecap="round" />
+              <path d="M55 40 C65 40, 75 48, 75 60 C75 70, 68 76, 64 80 L64 85 C64 87, 62 89, 60 89 L50 89 C48 89, 46 87, 46 85 L46 80 C42 76, 35 70, 35 60" fill="none" stroke="url(#goldGradientFooter)" stroke-width="4" stroke-linecap="round" />
+              <path d="M50 72 L55 64 L45 64 L50 72" fill="none" stroke="#f0a82b" stroke-width="3" stroke-linejoin="round" />
+              <defs>
+                <linearGradient id="tealGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1ec2db" />
+                  <stop offset="100%" stop-color="#138596" />
+                </linearGradient>
+                <linearGradient id="goldGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffc107" />
+                  <stop offset="100%" stop-color="#f0a82b" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="logo-text">
+              <span class="logo-top">ideas</span>
+              <span class="logo-bottom">jeneration</span>
+            </div>
+          </div>
+          <p class="footer-desc">IDEASJENERATION helps businesses translate complex datasets and business challenges into clear strategic actions. Built on decades of marketing leadership and strategy consulting.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#services" class="footer-link">Consulting & Analysis Services</a></li>
+            <li><a href="#training" class="footer-link">Courses & Masterclasses</a></li>
+            <li><a href="#about" class="footer-link">Your Mentor</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-title">Get in Touch</h4>
+          <ul class="footer-links" style="margin-bottom: 1.5rem;">
+            <li class="footer-link">Email: nutthinee@gmail.com</li>
+            <li class="footer-link">Phone: +66 63 961 4565</li>
+            <li class="footer-link">Office Location: Bangkok, Thailand</li>
+          </ul>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="footer-social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="footer-social-icon" aria-label="Website">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <span>&copy; 2026 IDEASJENERATION. All Rights Reserved.</span>
+        <span class="footer-disclaimer">This course outline, curriculum, and strategy frameworks are proprietary to Nutthinee Jenwattanavech. Unauthorized distribution or commercial reproduction is strictly prohibited.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

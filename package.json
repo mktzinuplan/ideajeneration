@@ -1,0 +1,19 @@
+{
+  "name": "ideajeneration-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test:modal": "node test-modal.js",
+    "test:training": "node test-accordion.js",
+    "test:contact": "node test-contact-form.js",
+    "test:all": "node test-modal.js && node test-accordion.js && node test-contact-form.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "puppeteer": "^25.3.0"
+  }
+}
